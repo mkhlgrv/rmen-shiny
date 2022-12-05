@@ -16,11 +16,7 @@ RUN R -e 'install.packages("devtools")'
 RUN R -e 'install.packages("DT")'
 RUN R -e "devtools::install_github(c('mkhlgrv/rmedb'))"
 RUN R -e "devtools::install_github(c('mkhlgrv/rmen'))"
-RUN R -e "devtools::install_github(c('mkhlgrv/rmen'))"
 
-# RUN mkdir -p /predict
-# COPY /predict /predict
-# RUN Rscript predict/make_predict.R 
 
 ENV _R_SHLIB_STRIP_=true
 ENV SHINY_LOG_STDERR=1
